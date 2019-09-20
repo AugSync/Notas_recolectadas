@@ -52,3 +52,114 @@ Create React App no se encarga de la lógica de `backend` o de bases de datos; t
 
 Cuando estés listo para desplegar a producción, ejecuta `npm run build` lo cual crea una compilación optimizada de tu aplicación en el directorio `build`. Puedes aprender más acerca de **Create React App** [en su archivo README](https://github.com/facebookincubator/create-react-app#create-react-app--) y en la [Guía del Usuario](https://facebook.github.io/create-react-app/).
 
+# Hola mundo
+
+El más pequeño de los ejemplos de React se ve así:
+
+```js
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+Este muestra un encabezado con el texto “Hello, world!” en la página.
+
+# [Stateful and Stateless Components in React](https://programmingwithmosh.com/javascript/stateful-stateless-components-react/)
+
+## Componentes con estado y sin estado
+
+Hoy, revisaremos qué componentes con estado y sin estado se encuentran en React, cómo puede notar la diferencia y el complejo proceso de decidir si los componentes tienen estado o no.
+
+## Revisión del estado
+
+Primero, repasemos qué estado es.
+
+En un componente, el estado son datos que importamos, generalmente para mostrar al usuario, que están sujetos a cambios. Podría cambiar porque la base de datos de la que estamos obteniendo puede actualizarse, el usuario la modificó, ¡hay muchas razones por las que los datos cambian!
+
+```javascript
+import React, {Component} from 'react'
+
+class Pigeons extends Component {
+  constructor() {
+    super()
+    this.state = {
+      pigeons: []
+    }
+  }
+  render() {
+    return (
+      <div>
+        <p>Look at all the pigeons spotted today!</p>
+        <ul>
+          {this.state.pigeons.map(pigeonURL => {
+            return <li><img src={pigeonURL} /></li>
+          })}
+        </ul>
+      </div>
+    )
+  }
+}
+```
+
+Por lo general, también tendríamos un componenteDidMount () que tomaría nuestros datos de una base de datos, pero el ejemplo anterior debería darle una idea básica: tenemos estado y podemos representar cosas desde el estado.
+
+## Componentes con estado y sin estado
+
+Los componentes con estado y sin estado tienen muchos nombres diferentes.
+
+También son conocidos como:
+
+- Componentes de contenedor vs presentación
+
+- Componentes inteligentes vs tontos
+
+La diferencia literal es que uno tiene estado y el otro no. Eso significa que los componentes con estado realizan un seguimiento de los datos cambiantes, mientras que los componentes sin estado imprimen lo que se les da a través de accesorios, o siempre representan lo mismo.
+
+Componente con estado / contenedor / inteligente:
+
+```javascript
+class Main extends Component {
+ constructor() {
+   super()
+   this.state = {
+     books: []
+   }
+ }
+ render() {
+   <BooksList books={this.state.books} />
+ }
+}
+```
+
+Sin estado / Presentacional / Componente tonto:
+
+```javascript
+const BooksList = ({books}) => {
+ return (
+   <ul>
+     {books.map(book => {
+       return <li>book</li>
+     })}
+   </ul>
+ )
+}
+```
+
+Observe que el componente sin estado se escribe como una función. Tan bueno como es el estado, siempre debe tratar de hacer que sus componentes sean lo más simples y sin estado posible, de modo que los diferentes componentes se puedan reutilizar como piezas de Lego, incluso si no tiene planes inmediatos para reutilizar un componente. ¡Los con estado deberían sentirse afortunados de ser así!
+
+## Componentes Visuales
+
+Conocidos en inglés como Presentational Components. Este tipo de componentes solo deben centrase y enfocar sus esfuerzos en como debe renderizarse la UI. Este tipo de componentes puede componerse de otros elementos visuales y suele incluir estilos y clases. Todos los datos implicados en su renderización se deben recibir a través de props, por lo que deben ser independientes de llamadas a servicios externos. Este tipo de componentes suelen ser de tipo Stateless ya que no necesitan estado, y deben de gestionar las acciones pasándoselas a componentes padre a través de sus props.
+
+**_Ejemplo:_**
+
+```js
+class Item extends React.Component {  
+    render () {  
+        return (  
+            <li><a href='#'>{ this.props.valor }</a></li>  
+        );  
+    }  
+}
+```
