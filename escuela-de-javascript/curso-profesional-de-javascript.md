@@ -97,7 +97,7 @@ Esto nos creará un archivo `package.json` que lo sustituiremos por el siguiente
 }
 ```
 
-Una vez tengamos todo esto listo vamos a proceder a instalar nuestro `live-server` para empezar a trabajar. Para instalar esto vamos a usar el siguiente comando `npm i -D live-server` donde `i` significa _install_ y la bandera `-D` _develoment_, esto quiere decir que no lo vamos a usar en producción.
+Una vez tengamos todo esto listo vamos a proceder a instalar nuestro `live-server` para empezar a trabajar. Para instalar esto vamos a usar el siguiente comando `npm i -D live-server` donde `i` significa _install_ y la bandera `-D` _development_, esto quiere decir que no lo vamos a usar en producción.
 
 Una vez instalado ya lo podremos usar con el `package.json` que dejé arriba. Lo usaremos con el comando `start` que llamará a su vez a `live-server`.
 
@@ -125,7 +125,7 @@ Nuestra pequeña aplicación andará en la **IP** que nos muestre la terminal.
 
 Tenemos un botón que no funciona, lo vamos a poner a funcionar con un `media query`. Abrimos nuestras etiquetas de `script`.
 
-Tenemos un vídeo que debemos manipular, lo vamos a hacer con `querySelector("")`, a este tenemos que pasarlo un elemento, en este caso será **video**, es el único elemento **video** en nuestro **HTML**. Tambien debemos traer nuestro botón con \`querySelector\`\`.
+Tenemos un vídeo que debemos manipular, lo vamos a hacer con `querySelector("")`, a este tenemos que pasarlo un elemento, en este caso será **video**, es el único elemento **video** en nuestro **HTML**. También debemos traer nuestro botón con \`querySelector\`\`.
 
 ```javascript
 const  video = document.querySelector("video")
@@ -140,7 +140,7 @@ button.onclick = ()=>  video.play()
 
 El `video.play()` se saca de la API que trae el navegador, todos los elementos del DOM traen un API. Para saber cuales son las opciones de esta API podemos ir a [MDN](https://developer.mozilla.org/es/docs/Web/API/HTMLMediaElement) a ver toda la documentación. No podemos darle _play_ de una vez a penas se entre en la página, esto pasa por que los navegadores tienen una seguridad que no permite que esto pase, solo se puede dar _play_ si el usuario tiene la libertad de hacerlo.
 
-Ahora nuestro código no es muy extensible, vamos a lograr esto usando **prototipado**. Para hacerlo extensible se pueden usar `clases`, pero en este caso usaremos `protitype`, usaremos el siguiente código para lograrlo.
+Ahora nuestro código no es muy extensible, vamos a lograr esto usando **prototipado**. Para hacerlo extensible se pueden usar `clases`, pero en este caso usaremos `prototype`, usaremos el siguiente código para lograrlo.
 
 ```javascript
 const  video = document.querySelector("video");
@@ -186,7 +186,7 @@ Explicación:
 
 1. A nuestra función madre o prototipo le pasamos una configuración. Esta configuración lo que va a tener es el elemento `video` original. Le asignamos a `this.media` el elemento `video`. 
 2. A la función extendida le asignamos `play()` a `this.media` para que se ejecute cuando presionemos el botón. 
-3. En nuestra función especial `player` es una instancia del prototipo le asignaremos el valor de `video` para que lo reciba en configuración. Esto lo haremos con **destructuración de objetos**.
+3. En nuestra función especial `player` es una instancia del prototipo le asignaremos el valor de `video` para que lo reciba en configuración. Esto lo haremos con **desestructuración de objetos**.
 
 Acá no podemos usar _**arrow function**_ por que el valor de `this` es global. Más adelante se verá con más detalle.
 
@@ -475,7 +475,7 @@ Tenemos la variable `color` disponible globalmente. Para evitar que sea global v
       })();
 ```
 
-Al hacer esto ya la variable color no estará en un ámbito global sino funcional. Cuando combinamos un **scope** con una **función** sucede esto que ya hicimos, el famoso **clousure**. La función que se encuentra en su interior puede acceder a la variable.
+Al hacer esto ya la variable color no estará en un ámbito global sino funcional. Cuando combinamos un **scope** con una **función** sucede esto que ya hicimos, el famoso **closure**. La función que se encuentra en su interior puede acceder a la variable.
 
 ### Segundo ejemplo
 
@@ -730,7 +730,7 @@ Es un concepto que tienen muchos lenguajes de programación, sobre todo aquellos
 
 ### This en Global Scope
 
-Si usamos el siguiente código: `concole.log(`this: ${this}`)` nos dirá que `this` es un objeto `Window`. Siempre que usemos `this` de forma global el _browser_ lo va a asignar a `Window`.
+Si usamos el siguiente código: `console.log(`this: ${this}`)` nos dirá que `this` es un objeto `Window`. Siempre que usemos `this` de forma global el _browser_ lo va a asignar a `Window`.
 
 ### Dentro de una función
 
@@ -817,7 +817,7 @@ Cuando llamamos a `this` se refiere a la instancia `cesar`, esto es importante s
 
 ## Los métodos call, apply y bind
 
-Es cierto que `this` no es un valor que podemos asignar directamente, pero sí existen unos métodos que son parte del prototipo de `function`, se llaman: `call`, `apply` y `bing`. Estos nos ayudarán a establecer `this` en el contexto de una llamada a una función.
+Es cierto que `this` no es un valor que podemos asignar directamente, pero sí existen unos métodos que son parte del prototipo de `function`, se llaman: `call`, `apply` y `bind`. Estos nos ayudarán a establecer `this` en el contexto de una llamada a una función.
 
 Crearemos un nuevo archivo en la carpeta de ejercicios para aprender más sobre esto.
 
@@ -871,8 +871,8 @@ caminar.apply(augusto, [800, "sureste"]);
 Acá le pasamos los parámetros extras como si fueran un arreglo. Eso nos sirve cuando le tenemos que pasar una lista larga de parámetros a nuestra función, podremos manejar mejor esto usando `apply`. También le podemos pasar una instancia de un arreglo.
 
 ```javascript
-const parametros = [800, "sureste"];
-caminar.apply(augusto, parametros);
+const params = [800, "sureste"];
+caminar.apply(augusto, params);
 ```
 
 Igual nos dará el mismo resultado.
@@ -937,7 +937,7 @@ Aveces tenemos objetos que se parecen a otros. Cuando llamamos a varios elemento
     </u>
 ```
 
-Usaremos estos botones para probar el `foreach`. Vamos a darle funcionalidad. Traeremos estos botones con `getElemenetByClassName` y que cuando le demos **click** a cada uno de estos botones abra una ventana que diga _'Nunca pares de aprender'._
+Usaremos estos botones para probar el `foreach`. Vamos a darle funcionalidad. Traeremos estos botones con `getElementByClassName` y que cuando le demos **click** a cada uno de estos botones abra una ventana que diga _'Nunca pares de aprender'._
 
 ```javascript
 const buttons = document.getElementsByClassName("call-to-action");
@@ -948,7 +948,7 @@ const buttons = document.getElementsByClassName("call-to-action");
       });
 ```
 
-Nos va a decir que `buttons` no es una función. Esto pasa porque `buttons` es un `Nodelist`. Se parecen a los arreglos pero no del todo, por lo menos tienen la propiedad `lenght` que nos puede servir para hacer el trabajo que queremos. Vamos a llamar el `foreach` a través del `Array` y le asignaremos el contexto de `buttons` con `call`.
+Nos va a decir que `buttons` no es una función. Esto pasa porque `buttons` es un `Nodelist`. Se parecen a los arreglos pero no del todo, por lo menos tienen la propiedad `length` que nos puede servir para hacer el trabajo que queremos. Vamos a llamar el `foreach` a través del `Array` y le asignaremos el contexto de `buttons` con `call`.
 
 ```javascript
 Array.prototype.forEach.call(buttons, element => {
@@ -1002,13 +1002,13 @@ Podemos crear una función que nos construya estos objetos que llamamos dos vece
 
 ```javascript
 function Hero(params) {
-        const hero = {
+        const heroe = {
           name: params
         };
-        hero.saludar = function() {
+        heroe.saludar = function() {
           console.log(`Hola a todos, soy ${this.name}`);
         };
-        return hero;
+        return heroe;
       }
       const heroe = Hero("Super-Man");
       heroe.saludar();
@@ -1025,11 +1025,11 @@ Const heroMethods = {
         }
       };
       function Hero(params) {
-        const hero = {
+        const heroe = {
           name: params
         };
-        hero.saludar = heroMethods.saludar;
-        return hero;
+        heroe.saludar = heroMethods.saludar;
+        return heroe;
       }
 ```
 
@@ -1049,18 +1049,18 @@ Podemos usarlo para traer los métodos de `heroMethods` de forma más sencilla.
 
 ```javascript
 function Hero(params) {
-        const hero = Object.create(heroMethods);
-        return hero;
+        const heroe = Object.create(heroMethods);
+        return heroe;
       }
 ```
 
-Y establecemos a `name` en la función `Hero` para recuperarlo, ya que no forma parte de `hero`.
+Y establecemos a `name` en la función `Hero` para recuperarlo, ya que no forma parte de `heroe`.
 
 ```javascript
 function Hero(params) {
-        const hero = Object.create(heroMethods);
-        hero.name = params;
-        return hero;
+        const heroe = Object.create(heroMethods);
+        heroe.name = params;
+        return heroe;
       }
 ```
 
@@ -1075,7 +1075,7 @@ En la consola si ponemos `heroMethods` nos arrojará nuestra función `saludar`.
     < {saludar: ƒ}
 ```
 
-Ahora si creamos una constante y hacemos referencia a este objeto con `objetct.create` pasa algo interesante.
+Ahora si creamos una constante y hacemos referencia a este objeto con `Object.create` pasa algo interesante.
 
 ```bash
     > const newHero = Object.create(heroMethods)
@@ -1106,7 +1106,7 @@ Podemos ver que cuenta con esta propiedad y en ella se encuentra nuestra funció
 
 ### Prototype
 
-El mejor lugar para colocar nuestros métodos es dentro de la función `Hero`. Para esto pondremos nuestros métodos en el `proto` de `hero`. Para lograr esto lo tenemos que hacer con `prototype`.
+El mejor lugar para colocar nuestros métodos es dentro de la función `Hero`. Para esto pondremos nuestros métodos en el `proto` de `heroe`. Para lograr esto lo tenemos que hacer con `prototype`.
 
 ```javascript
 Hero.prototype.saludar = function() {
@@ -1118,9 +1118,9 @@ Y ahora llamaremos a este método que está en el proto con Object.create.
 
 ```javascript
 function Hero(params) {
-        const hero = Object.create(Hero.prototype);
-        hero.name = params;
-        return hero;
+        const heroe = Object.create(Hero.prototype);
+        heroe.name = params;
+        return heroe;
       }
 
 Hero.prototype.saludar = function() {
@@ -1130,14 +1130,14 @@ Hero.prototype.saludar = function() {
 
 ### New
 
-Esta palabra es azúcar sintáctico, ya no tendremos que usar `Object.create` ni retornar la función `Hero` para que nuestro mensaje aparezca en consola. Al usar `New` automáticamente nuestra función `Hero` usa el `portotype` como `this`, ya no tendremos que llamar a `Hero.prototype` con `Object.create` para contar con la función `saludar`. Las partes que no necesitaremos las comentaré.
+Esta palabra es azúcar sintáctico, ya no tendremos que usar `Object.create` ni retornar la función `Hero` para que nuestro mensaje aparezca en consola. Al usar `New` automáticamente nuestra función `Hero` usa el `prototype` como `this`, ya no tendremos que llamar a `Hero.prototype` con `Object.create` para contar con la función `saludar`. Las partes que no necesitaremos las comentaré.
 
 ```javascript
 function Hero(params) {
-        //const hero = Object.create(Hero.prototype);
-        //hero.name = params;
+        //const heroe = Object.create(Hero.prototype);
+        //heroe.name = params;
         this.name = params;
-        //return hero;
+        //return heroe;
       }
 
       Hero.prototype.saludar = function() {
@@ -1154,7 +1154,7 @@ Al final podemos hacer lo mismo sin el `keyword new` pero usándolo nos facilita
 
 ## Herencia prototipal
 
-Ya vimos como funciona la herencia, cuando asignamos métodos a `hero` pudimos acceder a el a pesar de que cuando buscamos en la consola nos apareciera como un objeto vacío, sin embargo en `__proto__` estaba la referencia a los métodos. Esta es una de las mejores características que tiene JavaScript.
+Ya vimos como funciona la herencia, cuando asignamos métodos a `heroe` pudimos acceder a el a pesar de que cuando buscamos en la consola nos apareciera como un objeto vacío, sin embargo en `__proto__` estaba la referencia a los métodos. Esta es una de las mejores características que tiene JavaScript.
 
 Vamos a inspeccionar a esto hasta a llegar a `Object`. ¡Vamos al código!
 
@@ -1236,11 +1236,11 @@ El lenguaje busca el método en el objeto, sino existe se va al **proto** y si n
 
 ## Parsers y el Abstract Syntax Tree
 
-Para que el código llegue al navegador tiene que pasar muchas cosas, agarra el código, lo analiza, lo descontruye, lo construye nuevamente, lo ejecuta y lo optimiza. Vamos a hablar de todo esto.
+Para que el código llegue al navegador tiene que pasar muchas cosas, agarra el código, lo analiza, lo deconstruye, lo construye nuevamente, lo ejecuta y lo optimiza. Vamos a hablar de todo esto.
 
 ### La web
 
-Ha cambiado mucho, cuando empezó a leer JavaScript lo hacía con `Netscape` que hacía cosas muy simples, se leía línea por línea, un paso a la vez. Hoy es igual, pero ahora de una forma diferente, ahora **Google** lo ha cambiado, ellos necesitaban a un navegador que ejecutara todo eficientemente. Por eso reinventó el funcionamiento del motor de `JavaScipt`. En resumen esto es lo que hace:
+Ha cambiado mucho, cuando empezó a leer JavaScript lo hacía con `Netscape` que hacía cosas muy simples, se leía línea por línea, un paso a la vez. Hoy es igual, pero ahora de una forma diferente, ahora **Google** lo ha cambiado, ellos necesitaban a un navegador que ejecutara todo eficientemente. Por eso reinventó el funcionamiento del motor de `JavaScript`. En resumen esto es lo que hace:
 
 ![](../.gitbook/assets/screenshot_10.png)
 
@@ -1453,7 +1453,7 @@ Para saber cómo funciona hay que conocer a _Queue_, esto es una estructura de d
 
 ### Task Queue
 
-Cuando encolamos una tarea queda en las tareas _scheldule_, cuando el tiempo pase y se cumpla la condición o termine el proceso de espera pasa a _task queue_, luego se que llegue allí se topará con el _event loop_ que mirará siempre si hay tareas pendientes en _task queue_, al mismo tiempo mirará el _stack_ a ver si está vacío. Si el _stack_ no está vacío tiene que esperar entonces que sí lo esté.
+Cuando encolamos una tarea queda en las tareas _schedule_, cuando el tiempo pase y se cumpla la condición o termine el proceso de espera pasa a _task queue_, luego se que llegue allí se topará con el _event loop_ que mirará siempre si hay tareas pendientes en _task queue_, al mismo tiempo mirará el _stack_ a ver si está vacío. Si el _stack_ no está vacío tiene que esperar entonces que sí lo esté.
 
 ![](../.gitbook/assets/screenshot_24%20%283%29.png)
 
@@ -1668,7 +1668,7 @@ var g = gen(); // "Generator { }"
 
 [`Generator.prototype.next()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Generator/next)
 
-Retorna el valor ofecido por la expresión [`yield`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operators/yield)
+Retorna el valor ofrecido por la expresión [`yield`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operators/yield)
 
 [`Generator.prototype.return()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Generator/return)
 
@@ -1780,7 +1780,7 @@ El elemento que es usado como viewport para comprobar la visibilidad de elemento
 
 `rootMargin`
 
-Margen alrededor del elemeto root. Puede tener valores similares a los de CSS [`margin`](https://developer.mozilla.org/es/docs/Web/CSS/margin) property, e.g. "`10px 20px 30px 40px"` \(top, right, bottom, left\). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.
+Margen alrededor del elemento root. Puede tener valores similares a los de CSS [`margin`](https://developer.mozilla.org/es/docs/Web/CSS/margin) property, e.g. "`10px 20px 30px 40px"` \(top, right, bottom, left\). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.
 
 `threshold`
 
@@ -1819,7 +1819,7 @@ También, note que si especifica la opción `root`, el elemento target debe ser 
 
 ## Document: visibilitychange
 
-E levento `visibilitychange` se dispara al documento cuando el contenido de su pestaña se ha hecho visible o se ha ocultado.
+El evento `visibilitychange` se dispara al documento cuando el contenido de su pestaña se ha hecho visible o se ha ocultado.
 
 ### Ejemplo
 
@@ -1841,7 +1841,7 @@ Consideremos algunos casos de uso para la API de Visibilidad de Página.
 
 * Un sitio tiene un carrusel de imágenes que no debería avanzar a la siguiente diapositiva a no ser que el usuario esté viendo la página.
 * Una aplicación que muestra un panel de información y no se quiere que se actualice la información del servidor cuando la página no está visible.
-* Una página quiere detectar cuando se está precargando para poder mantener un recuento preciso de las vistat de página.
+* Una página quiere detectar cuando se está pre cargando para poder mantener un recuento preciso de las visitas de página.
 * Un sitio desea desactivar los sonidos cuando el dispositivo está en modo de espera \(el usuario presiona el botón de encendido para apagar la pantalla\).
 
 ## Service Worker API
@@ -1856,7 +1856,7 @@ En este punto, su service worker observará el siguiente ciclo de vida:
 2. Instalación
 3. Activación
 
-El service worker se descaga inmediatamente cuando un usuario accede por primera vez a un sitio controlado por el mismo.
+El service worker se descarga inmediatamente cuando un usuario accede por primera vez a un sitio controlado por el mismo.
 
 Después de esto se descarga cada 24 horas aproximadamente. Se puede descargar con más frecuencia, pero **debe** ser descargado cada 24 horas para prevenir que una mala programación sea molesta durante mucho tiempo.
 
@@ -1950,7 +1950,7 @@ Devuelve un [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 ## TypeScript
 
-**TypeScript** es un lenguaje de programación libre y de [código abierto](https://es.wikipedia.org/wiki/C%C3%B3digo_abierto) desarrollado y mantenido por [Microsoft](https://es.wikipedia.org/wiki/Microsoft). Es un superconjunto de [JavaScript](https://es.wikipedia.org/wiki/JavaScript), que esencialmente añade tipos estáticos y objetos basados en clases. [Anders Hejlsberg](https://es.wikipedia.org/wiki/Anders_Hejlsberg), diseñador de [C\#](https://es.wikipedia.org/wiki/C) y creador de [Delphi](https://es.wikipedia.org/wiki/Embarcadero_Delphi) y [Turbo Pascal](https://es.wikipedia.org/wiki/Turbo_Pascal), ha trabajado en el desarrollo de TypeScript.[1](https://es.wikipedia.org/wiki/TypeScript#cite_note-1)​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor \([Node.js](https://es.wikipedia.org/wiki/Node.js)\).
+**TypeScript** es un lenguaje de programación libre y de [código abierto](https://es.wikipedia.org/wiki/C%C3%B3digo_abierto) desarrollado y mantenido por [Microsoft](https://es.wikipedia.org/wiki/Microsoft). Es un super conjunto de [JavaScript](https://es.wikipedia.org/wiki/JavaScript), que esencialmente añade tipos estáticos y objetos basados en clases. [Anders Hejlsberg](https://es.wikipedia.org/wiki/Anders_Hejlsberg), diseñador de [C\#](https://es.wikipedia.org/wiki/C) y creador de [Delphi](https://es.wikipedia.org/wiki/Embarcadero_Delphi) y [Turbo Pascal](https://es.wikipedia.org/wiki/Turbo_Pascal), ha trabajado en el desarrollo de TypeScript.[1](https://es.wikipedia.org/wiki/TypeScript#cite_note-1)​ TypeScript puede ser usado para desarrollar aplicaciones JavaScript que se ejecutarán en el lado del cliente o del servidor \([Node.js](https://es.wikipedia.org/wiki/Node.js)\).
 
 TypeScript extiende la sintaxis de JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas. Está pensado para grandes proyectos, los cuales a través de un compilador de TypeScript se traducen a código JavaScript original.
 
@@ -2706,7 +2706,8 @@ Se definen como patrones de diseño software que ofrecen soluciones respecto a l
 * \[Observer\]\([https://es.wikipedia.org/wiki/Observer\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Observer_%28patr%C3%B3n_de_dise%C3%B1o)\) "Observer \(patrón de diseño\)"\)  \(Observador\): Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y actualicen automáticamente todos los objetos que dependen de él.
 * \[State\]\([https://es.wikipedia.org/wiki/State\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/State_%28patr%C3%B3n_de_dise%C3%B1o)\) "State \(patrón de diseño\)"\)  \(Estado\): Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno.
 * \[Strategy\]\([https://es.wikipedia.org/wiki/Strategy\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Strategy_%28patr%C3%B3n_de_dise%C3%B1o)\) "Strategy \(patrón de diseño\)"\)  \(Estrategia\): Permite disponer de varios métodos para resolver un problema y elegir cuál utilizar en tiempo de ejecución.
-* \[Template Method\]\([https://es.wikipedia.org/wiki/Template\_Method\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Template_Method_%28patr%C3%B3n_de_dise%C3%B1o)\) "Template Method \(patrón de diseño\)"\)  \(Método plantilla\): Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos, esto permite que las subclases redefinan ciertos pasos de un algoritmo sin cambiar su estructura.
+* \[Template Method\]\([https://es.wikipedia.org/wiki/Template\_Method\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Template_Method_%28patr%C3%B3n_de_dise%C3%B1o)\) "Template Method \(patrón de diseño\)"\)  \(Método plantilla\): Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos, esto permite que las subclases 
+ ciertos pasos de un algoritmo sin cambiar su estructura.
 * \[Visitor\]\([https://es.wikipedia.org/wiki/Visitor\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Visitor_%28patr%C3%B3n_de_dise%C3%B1o)\) "Visitor \(patrón de diseño\)"\)  \(Visitante\): Permite definir nuevas operaciones sobre una jerarquía de clases sin modificar las clases sobre las que opera.
 
 ### Patrones de interacción\[[editar](https://es.wikipedia.org/w/index.php?title=Patr%C3%B3n_de_dise%C3%B1o&action=edit&section=9)\]
@@ -2752,7 +2753,7 @@ Singleton = function Singleton$constructor() {
 }();
 ```
 
-## Singlenton con TS
+## Singleton con TS
 
 Uno de los patrones de diseño de creación más populares es el patrón Singleton que restringe la creación de instancias de una clase a un objeto.
 
@@ -2910,7 +2911,7 @@ El responsable de iniciar la comunicación es el sujeto concreto, pero se puede 
 
 * **Problema 4 \(referencias inválidas\):**
 
-A la hora de implementar este patrón se debe tener cuidado cuando un elemento observable desaparece. En ciertos lenguajes será el gestor de memoria el que cada cierto tiempo debe de limpiar las referencias liberadas, pero si un observable que sigue siendo observado puede no liberarse nunca. Para solucionar este problema puede crearse una función _destruir_ que notifique al gestor que el elemento observable va a desaparecer y si no se está usando la variante del gestor el observable directamente desregistrará a sus observadores. Antes de esto hay que eliminar las referencias a este elemento, por tanto, hay que eliminar a los observadores antes de eliminar al observable, ya que así se evitará tanto que aparezcan referencias inválidas al objeto una vez este haya sido eliminado, como que se produzcan operaciones inválidas intentando invocarlo.
+A la hora de implementar este patrón se debe tener cuidado cuando un elemento observable desaparece. En ciertos lenguajes será el gestor de memoria el que cada cierto tiempo debe de limpiar las referencias liberadas, pero si un observable que sigue siendo observado puede no liberarse nunca. Para solucionar este problema puede crearse una función _destruir_ que notifique al gestor que el elemento observable va a desaparecer y si no se está usando la variante del gestor el observable directamente des registrará a sus observadores. Antes de esto hay que eliminar las referencias a este elemento, por tanto, hay que eliminar a los observadores antes de eliminar al observable, ya que así se evitará tanto que aparezcan referencias inválidas al objeto una vez este haya sido eliminado, como que se produzcan operaciones inválidas intentando invocarlo.
 
 Se puede avisar a los observadores creando un método actualizar especial, en el que se tendrían dos opciones:
 
@@ -2918,7 +2919,7 @@ Se puede avisar a los observadores creando un método actualizar especial, en el
 2. El observador sigue vivo, pero apunta a nulo.
 3. **Problema 5:**
 
-Ya que se debe asegurar la consistencia del estado del sujeto antes de iniciar una notificación, siempre se notificará al final, ya que aunque en entorno multihilo se notifica antes de hacer los cambios, puede que los observadores soliciten información al observable cuando aún se van a hacer más cambios y se darían problemas de consistencia si se accede a un estado que aún no es el definitivo. De esta forma, los observadores ya no accederán a sujetos en estado inconsistente.
+Ya que se debe asegurar la consistencia del estado del sujeto antes de iniciar una notificación, siempre se notificará al final, ya que aunque en entorno multi hilo se notifica antes de hacer los cambios, puede que los observadores soliciten información al observable cuando aún se van a hacer más cambios y se darían problemas de consistencia si se accede a un estado que aún no es el definitivo. De esta forma, los observadores ya no accederán a sujetos en estado inconsistente.
 
 Por ejemplo:
 
@@ -2959,7 +2960,7 @@ Puedes usar Redux combinado con [React](https://facebook.github.io/react/), o cu
 
 Redux de por si es muy simple.
 
-Imagine que el estado de su aplicación se describe como un simble objeto. Por ejemplo, el estado de una aplicación de tareas \(TODO List\) puede tener el siguiente aspecto:
+Imagine que el estado de su aplicación se describe como un simple objeto. Por ejemplo, el estado de una aplicación de tareas \(TODO List\) puede tener el siguiente aspecto:
 
 ```javascript
 {
@@ -3034,7 +3035,7 @@ El [patrón](https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o) **Decorat
 
 Un ejemplo para poder ver la aplicabilidad del patrón decorador podría ser el siguiente:
 
-* Disponemos de una herramienta para crear interfaces gráﬁcas, que permite añadir funcionalidades como bordes o barras de desplazamiento a cualquier componente de la interfaz.
+* Disponemos de una herramienta para crear interfaces gráficas, que permite añadir funcionalidades como bordes o barras de desplazamiento a cualquier componente de la interfaz.
 * Una posible solución sería utilizar la herencia para extender las responsabilidades de la clase. Si optamos por esta solución, estaríamos haciendo un diseño inflexible \(estático\), ya que el cliente no puede controlar cuándo y cómo decorar el componente con esa propiedad.
 * La solución está en encapsular dentro de otro objeto, llamado Decorador, las nuevas responsabilidades. El decorador redirige las peticiones al componente y, además, puede realizar acciones adicionales antes y después de la redirección. De este modo, se pueden añadir decoradores con cualidades añadidas recursivamente.
 
@@ -3070,7 +3071,7 @@ Deﬁne un objeto al cual se le pueden agregar responsabilidades adicionales.
 
 * **Decorador**
 
-Mantiene una referencia al componente asociado. Implementa la interfaz de la superclase Componente delegando en el componente asociado.
+Mantiene una referencia al componente asociado. Implementa la interfaz de la super clase Componente delegando en el componente asociado.
 
 * **Decorador Concreto**
 
@@ -3096,7 +3097,7 @@ Se crea a partir de _Ventana_ la subclase abstracta _VentanaDecorator_ y, hereda
 
 ### PATRÓN ESTRUCTURAL
 
-El patrón decorator está diseñado para solucionar problemas donde la jerarquía con subclasificación no puede ser aplicada, o se requiere de un gran impacto en todas las clases de la jerarquía con el fin de poder lograr el comportamiento esperado. Decorator permite al usuario añadir nuevas funcionalidades a un objeto existente sin alterar su estructura, mediante la adición de nuevas clases que envuelven a la anterior dándole funcionamiento extra.
+El patrón decorator está diseñado para solucionar problemas donde la jerarquía con sub clasificación no puede ser aplicada, o se requiere de un gran impacto en todas las clases de la jerarquía con el fin de poder lograr el comportamiento esperado. Decorator permite al usuario añadir nuevas funcionalidades a un objeto existente sin alterar su estructura, mediante la adición de nuevas clases que envuelven a la anterior dándole funcionamiento extra.
 
 ![](https://reactiveprogramming.io/public/books/patterns/img/patterns-articles/decorator-diagram.png)
 
@@ -3244,6 +3245,3 @@ Una vez que has iniciado sesión es tan simple como ejecutar:
 ```bash
 npm publish
 ```
-
-
-
