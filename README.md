@@ -16,4 +16,5 @@ Si colaboras muchas veces con el documento te daré acceso para que incluyas tu 
 
 ##  Índice de contenido
 
+Este link te va a dirigir al repositorio, puedes ver el índice en el lateral de esta página. 
 [Ver índice](./SUMMARY.md)
