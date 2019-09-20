@@ -1,5 +1,5 @@
 ---
-description: Estas serán las notas que tomaré de los próximos cursos de Platzi
+description: Estas serán las notas que los estudiantes de Platzi han tomado
 ---
 
 # Notas de los cursos de Platzi
