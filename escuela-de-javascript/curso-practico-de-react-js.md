@@ -1243,3 +1243,103 @@ Las dos líneas anteriores son equivalentes, y utilizan  [funciones flecha](http
 
 En ambos casos, el argumento  `e`  que representa el evento de React va a ser pasado como un segundo argumento después del ID. Con una función flecha, tenemos que pasarlo explícitamente, pero con  `bind`  cualquier argumento adicional es pasado automáticamente.
 
+# Git init
+
+git-init: crea un repositorio de Git vacío o reinicializa uno existente
+
+## SINOPSIS
+
+	_git init_ [-q | --quiet] [--bare] [--template = <template_directory>] [--separate-git-dir <git dir>]  [--shared [= <permissions>]] [directorio]
+
+
+##   DESCRIPCIÓN
+
+Este comando crea un repositorio vacío de Git - básicamente un `.git` directorio con subdirectorios para `objects`, `refs/heads`, `refs/tags`, y los archivos de plantilla. `HEAD`También se crea un archivo inicial que hace referencia al HEAD de la rama maestra.
+
+Si se establece la `$GIT_DIR`variable de entorno, especifica una ruta a utilizar en lugar de `./.git`para la base del repositorio.
+
+Si el directorio de almacenamiento de objetos se especifica a través de la `$GIT_OBJECT_DIRECTORY`variable de entorno, los directorios sha1 se crean debajo; de lo contrario `$GIT_DIR/objects` , se utiliza el directorio predeterminado .
+
+Ejecutar _git init_ en un repositorio existente es seguro. No sobrescribirá las cosas que ya están allí. La razón principal para volver a ejecutar _git init_ es recoger plantillas recién agregadas (o mover el repositorio a otro lugar si se da --separate-git-dir).
+
+## EJEMPLOS
+
+Inicie un nuevo repositorio Git para una base de código existente
+
+	$ cd / ruta / a / my / codebase 
+	$ git init **(1)** 
+	$ git add. **(2)** 
+	$ git commit **(3)**
+
+1.  Cree un directorio /path/to/my/codebase/.git.
+    
+2.  Agregue todos los archivos existentes al índice.
+    
+3.  Registre el estado prístino como el primer compromiso en la historia.
+
+# [npm-init](https://docs.npmjs.com/cli/init.html)
+ Crea un archivo package.json
+
+## [SINOPSIS](https://docs.npmjs.com/cli/init#synopsis)
+
+```
+npm init [--force|-f|--yes|-y|--scope]
+npm init <@scope> (same as `npx <@scope>/create`)
+npm init [<@scope>/]<name> (same as `npx [<@scope>/]create-<name>`)
+
+```
+
+## [EJEMPLOS ](https://docs.npmjs.com/cli/init#examples)
+
+Cree un nuevo proyecto basado en React usando [`create-react-app`](https://npm.im/create-react-app):
+
+```
+$ npm init react-app ./my-react-app
+
+```
+
+Cree un nuevo `esm`paquete compatible con [`create-esm`](https://npm.im/create-esm):
+
+```
+$ mkdir my-esm-lib && cd my-esm-lib
+$ npm init esm --yes
+
+```
+
+Genere un paquete antiguo simple.json usando init heredado:
+
+```
+$ mkdir my-npm-pkg && cd my-npm-pkg
+$ git init
+$ npm init
+
+```
+
+Generarlo sin tener que hacer preguntas:
+
+```
+$ npm init -y
+
+```
+
+## [DESCRIPCIÓN ](https://docs.npmjs.com/cli/init#description)
+
+`npm init <initializer>` se puede usar para configurar un paquete npm nuevo o existente.
+
+`initializer`en este caso, se llama un paquete npm `create-<initializer>`, que será instalado por , y luego se ejecutará su bin principal, presumiblemente creando o actualizando y ejecutando cualquier otra operación relacionada con la inicialización.[](https://npm.im/npx)`[npx](https://docs.npmjs.com/cli/npx)``package.json`
+
+El comando init se transforma en una `npx`operación correspondiente de la siguiente manera:
+
+-   `npm init foo` -> `npx create-foo`
+-   `npm init @usr/foo` -> `npx @usr/create-foo`
+-   `npm init @usr` -> `npx @usr/create`
+
+Cualquier opción adicional se pasará directamente al comando, por lo que se `npm init foo --hello`asignará a `npx create-foo --hello`.
+
+Si se omite el inicializador (simplemente llamando `npm init`), init recurrirá al comportamiento init heredado. Le hará un montón de preguntas y luego escribirá un package.json para usted. Intentará hacer conjeturas razonables basadas en los campos existentes, las dependencias y las opciones seleccionadas. Es estrictamente aditivo, por lo que mantendrá todos los campos y valores que ya se hayan establecido. También puede usar `-y`/ `--yes`para omitir el cuestionario por completo. Si aprueba `--scope`, creará un paquete con ámbito.
+
+# Estructura de directorios estandar
+
+  
+![enter image description here](https://i.stack.imgur.com/370Im.png)
+
