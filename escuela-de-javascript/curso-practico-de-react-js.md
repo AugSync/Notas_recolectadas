@@ -1501,3 +1501,56 @@ Cualquiera de los métodos iniciará una instancia del servidor y comenzará a e
 webpack-dev-server está configurado de manera predeterminada para admitir la recarga en vivo de archivos mientras edita sus activos mientras el servidor se está ejecutando.
 
 Consulte [**la documentación**](https://webpack.js.org/configuration/dev-server/#devserver) para obtener más casos de uso y opciones.
+
+# sass-loader
+
+Carga un archivo Sass / SCSS y lo compila en CSS.
+
+## Empezando
+
+Para comenzar, deberá instalar `sass-loader`:
+```bash
+npm install sass-loader nodo-sass webpack --save-dev
+```
+El sass-loader requiere que instales [Node Sass](https://github.com/sass/node-sass) o [Dart Sass](https://github.com/sass/dart-sass) por tu cuenta (puedes encontrar más documentación a continuación). Esto le permite controlar las versiones de todas sus dependencias y elegir qué implementación de Sass usar.
+
+-   [node sass](https://github.com/sass/node-sass)
+-   [dat sass](http://sass-lang.com/dart-sass)
+
+Encadene el sass-loader con el [css-loader](https://github.com/webpack-contrib/css-loader) y el [style-loader](https://github.com/webpack-contrib/style-loader) para aplicar inmediatamente todos los estilos al DOM o al [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) para extraerlo en un archivo separado.
+
+Luego agregue el cargador a su `webpack`configuración. Por ejemplo:
+
+**file.js**
+```js
+import style from './style.scss';
+```
+**file.scss**
+```css
+$body-color: red;
+
+body {
+  color: $body-color;
+}
+```
+**webpack.config.js**
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
+  },
+};
+```
+Y corre a `webpack`través de tu método preferido.
