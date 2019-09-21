@@ -1386,3 +1386,72 @@ Luego configuramos `.babelrc` para implementar el uso de `@babel/preset-env` que
 }
 ```
 
+# Webpack
+
+
+![Webpack.png](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Webpack.png/100px-Webpack.png)
+
+
+
+**Webpack** (estilizado **webpack** ) es un [código abierto](https://en.wikipedia.org/wiki/Open-source_software "Software de código abierto") [de JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") módulo bundler. [[2]](https://en.wikipedia.org/wiki/Webpack#cite_note-2) [[3]](https://en.wikipedia.org/wiki/Webpack#cite_note-3) [[4]](https://en.wikipedia.org/wiki/Webpack#cite_note-4) [[5]](https://en.wikipedia.org/wiki/Webpack#cite_note-5) [[6]](https://en.wikipedia.org/wiki/Webpack#cite_note-6) Es un paquete de módulos principalmente para JavaScript, pero puede transformar activos front-end como HTML, CSS e imágenes si se incluyen los complementos correspondientes. [[7]](https://en.wikipedia.org/wiki/Webpack#cite_note-7) Webpack toma módulos con dependencias y genera activos estáticos que representan esos módulos. [[8]](https://en.wikipedia.org/wiki/Webpack#cite_note-8)
+
+## Dependencias a usar
+```json
+"devDependencies": {
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-cli": "^3.3.9"
+  }
+```
+
+Vamos a configurar **webpack** con el archivo `webpack.config.js` en la raíz de nuestro proyecto. 
+```js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
+  },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_module/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
+      }
+    ]
+  },
+  plugins: [
+      new HtmlWebpackPlugin({
+          template: './public/index.html',
+          filename: './index.html'
+      })
+  ]
+};
+```
+
+Configuramos en nuestro `package.json` el siguiente *script*:
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  }
+ ```
+Corremos nuestro copilador con `npm run build` para que se aloje el la carpeta `dist`. 
