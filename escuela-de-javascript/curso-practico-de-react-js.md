@@ -1343,3 +1343,46 @@ Si se omite el inicializador (simplemente llamando `npm init`), init recurrirá 
   
 ![enter image description here](https://i.stack.imgur.com/370Im.png)
 
+# Babel (compilador)
+
+
+![Logotipo de Babel.js](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Babel_Logo.svg/250px-Babel_Logo.svg.png)
+**Babel** es un [compilador de](https://en.wikipedia.org/wiki/Compiler "Compiler") [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") [gratuito](https://en.wikipedia.org/wiki/Free_software "Software libre") y [de código](https://en.wikipedia.org/wiki/Open-source_software "Software de código abierto") [abierto](https://en.wikipedia.org/wiki/JavaScript "JavaScript")  que se utiliza principalmente para convertir el [código ECMAScript 2015+](https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015 "ECMAScript") (ES6 +) en una versión de [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") compatible con versiones anteriores que pueden ejecutar los [motores JavaScript](https://en.wikipedia.org/wiki/JavaScript_engine "JavaScript engine") más antiguos . Babel es una herramienta popular para usar las funciones más nuevas del lenguaje de programación JavaScript. [[3]](https://en.wikipedia.org/wiki/Babel_(compiler)#cite_note-3)
+
+## Instalación 
+
+Usaremos las siguientes dependencias:
+```json
+// package.json
+{
+  "name": "react-curso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
+``` 
+
+Usamos `npm install` para instalar todo esto. 
+
+Luego configuramos `.babelrc` para implementar el uso de `@babel/preset-env` que es para usar `js` moderno y `@babel/preset-react` que es para usarlo junto con React. 
+
+```json
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
