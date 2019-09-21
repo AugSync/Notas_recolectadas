@@ -1455,3 +1455,49 @@ Configuramos en nuestro `package.json` el siguiente *script*:
   }
  ```
 Corremos nuestro copilador con `npm run build` para que se aloje el la carpeta `dist`. 
+
+# webpack-dev-server
+
+Use [webpack](https://webpack.js.org/) con un servidor de desarrollo que proporcione recarga en vivo. Esto debe usarse **solo** para el **desarrollo** .
+
+Utiliza [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) debajo del capó, que proporciona acceso rápido en memoria a los activos del paquete web.
+
+## Empezando
+
+Primero lo primero, instale el módulo:
+
+npm install webpack-dev-server --save-dev
+
+_Nota: Si bien puede instalar y ejecutar webpack-dev-server a nivel mundial, recomendamos instalarlo localmente. webpack-dev-server siempre usará una instalación local sobre una global._
+
+## Uso
+
+Hay dos métodos principales recomendados para usar el módulo:
+
+## Con la CLI
+
+La forma más fácil de usarlo es con la CLI. En el directorio donde `webpack.config.js`está, ejecute:
+
+node_modules / .bin / webpack-dev-server
+
+_**Nota** : Muchas opciones de CLI están disponibles con `webpack-dev-server`. Explore este [enlace](https://webpack.js.org/configuration/dev-server/) ._
+
+## Con scripts NPM
+
+Los scripts package.json de NPM son un medio conveniente y útil para ejecutar binarios instalados localmente sin tener que preocuparse por sus rutas completas. Simplemente defina un script como tal:
+```js
+" scripts " : { " start: dev " : " webpack-dev-server " }
+```
+Y ejecute lo siguiente en su terminal / consola:
+
+npm run start: dev
+
+NPM hará referencia automática al binario `node_modules`para usted y ejecutará el archivo o comando.
+
+## El resultado
+
+Cualquiera de los métodos iniciará una instancia del servidor y comenzará a escuchar las conexiones desde `localhost`el puerto `8080`.
+
+webpack-dev-server está configurado de manera predeterminada para admitir la recarga en vivo de archivos mientras edita sus activos mientras el servidor se está ejecutando.
+
+Consulte [**la documentación**](https://webpack.js.org/configuration/dev-server/#devserver) para obtener más casos de uso y opciones.
