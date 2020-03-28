@@ -619,7 +619,7 @@ const player = new MediaPlayer({
 });
 ```
 
-No estamos seguros si nuestro plugins va a recibir parámetros pero luego vemos. Vamos a crear la carpeta y el archivo inexistente que instanciamos. Cuando usamos **script** con **type movil** tenemos que ser específicos y usar la extensión `.js`.
+No estamos seguros si nuestro plugins va a recibir parámetros pero luego vemos. Vamos a crear la carpeta y el archivo inexistente que instanciamos. Cuando usamos **script** con **type module** tenemos que ser específicos y usar la extensión `.js`.
 
 ![](../.gitbook/assets/screenshot_3.png)
 
