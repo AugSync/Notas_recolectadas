@@ -6,7 +6,7 @@ description: Estas serán las notas que los estudiantes de Platzi han tomado
 
 ## Propósito de este documento
 
-Compartir las notas de los estudiantes con el resto y tener un sitio de fácil acceso a las notas. 
+Compartir las notas de los estudiantes con el rezto y tener un citio de facil acceso a las notas. 
 
 ## Cómo contribuir
 
