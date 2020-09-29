@@ -13,6 +13,7 @@
 # pt_BR
 dictionaries:
   - es
+  - en
 
 # Any files/folders we should ignore?
 excluded_files:
