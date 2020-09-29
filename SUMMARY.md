@@ -4,7 +4,7 @@
 
 ## Backend con JavaScript
 
-* [Lo esencial de Node.js](backend-con-javascript/lo-esencial-de-node.js.md)
+* [Lo esencial de Node.js](backend-con-javascript/lo-esencial-de-node.js.md)
 
 ## Crecimiento Profesional
 

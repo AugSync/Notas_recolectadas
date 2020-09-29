@@ -292,10 +292,6 @@ Ahora a las etiquetas `<script>` que quedaron en nuestro HTML le agregaremos el 
 
 No usaremos `async` ni `defer` por que ya lo tenemos al final y no interrumpirá con el HTML.
 
-
-
-
-
 ## Scope
 
 **Scope** o **ámbito de una variable** representa el tiempo de vida en el que esta existe, puede ser una variable que hayamos definido o el argumento a un función. Eso es muy importante por que evite que reescribamos el valor de una variable que ya habíamos definido. Por desgracia JavaScript no siempre tuve el mejor sistema de scope de variables, en el libro [JavaScript: The Good Parts](https://www.amazon.es/JavaScript-Good-Parts-ebook/dp/B0026OR2ZY) de [Douglas Crockford](https://www.amazon.es/Douglas-Crockford/e/B002N3VYB6?ref_=dbs_p_ebk_r00_abau_000000) se dice que el **scope** y variables globales son de las cosas más horrible que tiene el lenguaje. Por suerte esto a mejorado muchísimo, ahora tenemos a `let` y `const` que nos ayuda a evitar estos problemas.
@@ -347,7 +343,7 @@ printNumbers()
 Crea un siclo de **10** número del **0** al **9** y va a tener un retraso de **100ms**, pero si ejecutamos este código pasa algo extraño:
 
 ```javascript
-// (10) 10 
+// (10) 10
 ```
 
 Se imprime 10 veces 10 y eso no es lo que queremos.
@@ -524,7 +520,7 @@ No queremos que `.log` pueda leer nuestra variable, **¿cómo la hacemos privada
 
 ```javascript
 getCount:  function()  {
-	 return count;
+     return count;
 }
 ```
 
@@ -916,7 +912,7 @@ También podemos pasar un parámetro cuando llamamos con `bind` y así establece
 
 ```javascript
 const danielCamina = caminar.bind(daniel, 200); 
-      danielCamina("oeste"); 
+      danielCamina("oeste");
 ```
 
 Nos dará el mismo resultado pero guardando ya un parámetro que es la `distancia`. A esta técnica se le llama **Function currying**.
@@ -991,7 +987,7 @@ const bat = {
       bat.saludar = function() {
         console.log(`Hola a todos, soy ${this.name}`); 
       };
-      bat.saludar();  
+      bat.saludar();
 ```
 
 Esto es muy tedioso, nadie quiere estar escribiendo lo mismo a cada rato, es ineficiente.
@@ -1284,36 +1280,36 @@ Allí veremos como nos arroja los tokens de una declaración.
 
 ```javascript
 > var answer = 6 * 7;
-	< [
-	    {
-	        "type": "Keyword",
-	        "value": "var"
-	    },
-	    {
-	        "type": "Identifier",
-	        "value": "answer"
-	    },
-	    {
-	        "type": "Punctuator",
-	        "value": "="
-	    },
-	    {
-	        "type": "Numeric",
-	        "value": "6"
-	    },
-	    {
-	        "type": "Punctuator",
-	        "value": "*"
-	    },
-	    {
-	        "type": "Numeric",
-	        "value": "7"
-	    },
-	    {
-	        "type": "Punctuator",
-	        "value": ";"
-	    }
-	]
+    < [
+        {
+            "type": "Keyword",
+            "value": "var"
+        },
+        {
+            "type": "Identifier",
+            "value": "answer"
+        },
+        {
+            "type": "Punctuator",
+            "value": "="
+        },
+        {
+            "type": "Numeric",
+            "value": "6"
+        },
+        {
+            "type": "Punctuator",
+            "value": "*"
+        },
+        {
+            "type": "Numeric",
+            "value": "7"
+        },
+        {
+            "type": "Punctuator",
+            "value": ";"
+        }
+    ]
 ```
 
 Esto nos da el tipo y el valor que tiene cada palabra, símbolo o número. Tendremos cada uno de los caracteres clasificados para poder manipular y leer cada uno de ellos.
@@ -1564,8 +1560,6 @@ En JavaScript, un _setter_ puede ser usado para ejecutar una función para una p
 
 Devuelve una promesa que se cumple o rechaza tan pronto como una de las promesas del iterable se cumple o rechaza, con el valor o razón de esa promesa.
 
-
-
 ## Proxy
 
 El objeto **Proxy** se usa para definir un comportamiento personalizado para operaciones fundamentales \(por ejemplo, para observar propiedades, cuando se asignan, enumeración, invocación de funciones, etc\).
@@ -1580,7 +1574,7 @@ Todas las trampas son opcionales. Si no se ha definido una trampa, el comportami
 
 Una trampa para obtener valores de propiedad.
 
-### Sintaxis 
+### Sintaxis
 
 ```javascript
 var p = new Proxy(target, {
@@ -2045,7 +2039,7 @@ let color: string = "blue";
 color = 'red';
 ```
 
-También puede usar _cadenas de plantillas_ , que pueden abarcar varias líneas y tener expresiones incrustadas. Estas cadenas están rodeadas por el carácter backtick / backquote \( ````` \), y las expresiones incrustadas son de la forma `${ expr }`.
+También puede usar _cadenas de plantillas_ , que pueden abarcar varias líneas y tener expresiones incrustadas. Estas cadenas están rodeadas por el carácter backtick / backquote \( ````````` \), y las expresiones incrustadas son de la forma`````${ expr }\`.
 
 ```typescript
 let fullName: string = `Bob Bobbington`;
@@ -2626,7 +2620,7 @@ Corresponden a patrones de diseño de software que solucionan problemas de creac
 * \[Object Pool\]\([https://es.wikipedia.org/wiki/Object\_Pool\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Object_Pool_%28patr%C3%B3n_de_dise%C3%B1o)\) "Object Pool \(patrón de diseño\)"\)  \(no pertenece a los patrones especificados por GoF\): se obtienen objetos nuevos a través de la clonación. Utilizado cuando el costo de crear una clase es mayor que el de clonarla. Especialmente con objetos muy complejos. Se especifica un tipo de objeto a crear y se utiliza una interfaz del prototipo para crear un nuevo objeto por clonación. El proceso de clonación se inicia instanciando un tipo de objeto de la clase que queremos clonar.
 * \[Abstract Factory\]\([https://es.wikipedia.org/wiki/Abstract\_Factory\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Abstract_Factory_%28patr%C3%B3n_de_dise%C3%B1o)\) "Abstract Factory \(patrón de diseño\)"\)  \(fábrica abstracta\): permite trabajar con objetos de distintas familias de manera que las familias no se mezclen entre sí y haciendo transparente el tipo de familia concreta que se esté usando. El problema a solucionar por este patrón es el de crear diferentes familias de objetos, como por ejemplo, la creación de interfaces gráficas de distintos tipos \(ventana, menú, botón, etc.\).
 * \[Builder\]\([https://es.wikipedia.org/wiki/Builder\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Builder_%28patr%C3%B3n_de_dise%C3%B1o)\) "Builder \(patrón de diseño\)"\)  \(constructor virtual\): abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto.
-* \[Factory Method\]\([https://es.wikipedia.org/wiki/Factory\_Method\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Factory_Method_%28patr%C3%B3n_de_dise%C3%B1o)\) "Factory Method \(patrón de diseño\)"\)  \(método de fabricación\): centraliza en una clase constructora la creación de objetos de un subtipo de un tipo determinado, ocultando al usuario la casuística, es decir, la diversidad de casos particulares que se pueden prever, para elegir el subtipo que crear. Parte del principio de que las subclases determinan la clase a implementar. A continuación se muestra un ejemplo de este patrón:
+* \[Factory Method\]\([https://es.wikipedia.org/wiki/Factory\_Method\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Factory_Method_%28patr%C3%B3n_de_dise%C3%B1o)\) "Factory Method \(patrón de diseño\)"\) \(método de fabricación\): centraliza en una clase constructora la creación de objetos de un subtipo de un tipo determinado, ocultando al usuario la casuística, es decir, la diversidad de casos particulares que se pueden prever, para elegir el subtipo que crear. Parte del principio de que las subclases determinan la clase a implementar. A continuación se muestra un ejemplo de este patrón:
 
   \`\`\`js
 
@@ -2707,7 +2701,9 @@ Se definen como patrones de diseño software que ofrecen soluciones respecto a l
 * \[State\]\([https://es.wikipedia.org/wiki/State\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/State_%28patr%C3%B3n_de_dise%C3%B1o)\) "State \(patrón de diseño\)"\)  \(Estado\): Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno.
 * \[Strategy\]\([https://es.wikipedia.org/wiki/Strategy\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Strategy_%28patr%C3%B3n_de_dise%C3%B1o)\) "Strategy \(patrón de diseño\)"\)  \(Estrategia\): Permite disponer de varios métodos para resolver un problema y elegir cuál utilizar en tiempo de ejecución.
 * \[Template Method\]\([https://es.wikipedia.org/wiki/Template\_Method\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Template_Method_%28patr%C3%B3n_de_dise%C3%B1o)\) "Template Method \(patrón de diseño\)"\)  \(Método plantilla\): Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos, esto permite que las subclases 
- ciertos pasos de un algoritmo sin cambiar su estructura.
+
+  ciertos pasos de un algoritmo sin cambiar su estructura.
+
 * \[Visitor\]\([https://es.wikipedia.org/wiki/Visitor\_\(patr%C3%B3n\_de\_dise%C3%B1o](https://es.wikipedia.org/wiki/Visitor_%28patr%C3%B3n_de_dise%C3%B1o)\) "Visitor \(patrón de diseño\)"\)  \(Visitante\): Permite definir nuevas operaciones sobre una jerarquía de clases sin modificar las clases sobre las que opera.
 
 ### Patrones de interacción\[[editar](https://es.wikipedia.org/w/index.php?title=Patr%C3%B3n_de_dise%C3%B1o&action=edit&section=9)\]
@@ -3025,8 +3021,6 @@ function todoApp(state = {}, action) {
 
 Esto es básicamente toda la idea de Redux. Tenga en cuenta que no hemos utilizado ninguna API de Redux. Ya se incluyen algunas utilidades para facilitar este patrón, pero la idea principal es que usted describe cómo su estado se actualiza con el tiempo en respuesta a los objetos de acción, y el 90% del código que se escribe es simplemente JavaScript, sin uso de Redux en si mismo, sus APIs, o cualquier magia.
 
-
-
 ## Decorator \(patrón de diseño\)
 
 El [patrón](https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o) **Decorator** responde a la necesidad de añadir dinámicamente funcionalidad a un Objeto. Esto nos permite no tener que crear sucesivas clases que hereden de la primera incorporando la nueva funcionalidad, sino otras que la implementan y se asocian a la primera.
@@ -3245,3 +3239,4 @@ Una vez que has iniciado sesión es tan simple como ejecutar:
 ```bash
 npm publish
 ```
+

@@ -5,7 +5,7 @@ description: >-
   conoces lo básico como manejar JavaScript.
 ---
 
-# Lo esencial de Node.js
+# Lo esencial de Node.js
 
 ## Requisitos
 
@@ -228,8 +228,7 @@ Acá usamos la dependencia que agregamos, `glob` que nos sirve para cargar archi
 
 Acá estamos cargando con `glob` recursivamente las rutas que cumplan con el siguiente esquema `"./routes/**/*.js"`, de modo que busca dentro del directorio `routes` todo lo que se encuentre dentro del mismo que tenga extensión `file.js`,  luego va a iterar por cada archivo que encuentre y usará la condición de que el archivo no se llame `index.js`, ese será el único archivo que no trabajará la condicional. Para todos los demás casos haremos uso de `require` con el `path.resolve` para construir la ruta dentro del mismo, finalmente le pasamos nuestra instancia de aplicación `app` para tener una única carga de rutas de manera dinámica, fácil de entender y asistida. 
 
-{% code-tabs %}
-{% code-tabs-item title="Explicación del código" %}
+{% code title="Explicación del código" %}
 ```javascript
 const glob = require("glob");
 const path = require("path");
@@ -247,8 +246,7 @@ de nuestra aplicación */
   })
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Otras rutas que tenemos en nuestros archivos
 
@@ -258,8 +256,7 @@ Ahora miraremos las otras rutas que tenemos, los otros archivos que no tomamos e
 
 ![Mostrar&#xE9; los c&#xF3;digo que contienen a continuaci&#xF3;n](../.gitbook/assets/image%20%284%29.png)
 
-{% code-tabs %}
-{% code-tabs-item title="index.js" %}
+{% code title="index.js" %}
 ```javascript
 module.exports = function (app) {
     app.get("*", (req, res)=>{
@@ -269,11 +266,9 @@ module.exports = function (app) {
      contenga nuestra apliación, mostrará el mensaje 
      "Route not defined!" */
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="home.js" %}
+{% code title="home.js" %}
 ```javascript
 module.exports = function (app) {
     app.get("/", (req, res)=>{
@@ -281,11 +276,9 @@ module.exports = function (app) {
     });
 } /* Nos dice que estamos en la ruta madre */
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="profile.js" %}
+{% code title="profile.js" %}
 ```javascript
 module.exports = function (app) {
     app.get("/profile/:user", (req, res)=>{
@@ -293,13 +286,11 @@ module.exports = function (app) {
     });
 } /* Un badge divertido que nos dirá el nombre del perfil que busquemos */
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Ahora incluiremos todos estos códigos de express en nuestro `index.js` que es nuestro archivo principal. Ahora tenemos la libertad de requerir solo la carpeta donde está nuestro `index.js` \(donde contiene `glob`\) ya que `glob` se encargará de incluir los otros archivos. 
 
-{% code-tabs %}
-{% code-tabs-item title="index.js archivo principal" %}
+{% code title="index.js archivo principal" %}
 ```javascript
 const express = require("express");
 const app = express();
@@ -315,8 +306,7 @@ app.listen(3000, ()=>{
     console.log("Express ha iniciado correctamente!");
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Ahora procederemos a probar nuestra pequeña app en nuestro navegador, recordemos que se escucha en el puerto `3000`.
 
