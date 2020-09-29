@@ -12,9 +12,7 @@
 # pt
 # pt_BR
 dictionaries:
-  - en
-  - en_GB
-  - dictionary-es-mx
+  - es
 
 # Any files/folders we should ignore?
 excluded_files:
