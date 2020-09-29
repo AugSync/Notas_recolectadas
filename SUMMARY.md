@@ -10,6 +10,10 @@
 
 * [Ortografía básica](crecimiento-profesional/ortografia-basica.md)
 
+## English
+
+* [Estrategias para aprender Online](english/estrategias-para-aprender-online.md)
+
 ## IoT <a id="electricidad-y-electronica"></a>
 
 * [Electricidad y electrónica](electricidad-y-electronica/electricidad-y-electronica.md)
