@@ -80,7 +80,7 @@ Hazte tests de tus skills para saber en dónde debes reforzar tu aprendizaje.
 
 **Could you tell me how you learned to speak like that?** - ¿Puedes decirme cómo aprendiste a hablar así?
 
-**Thaks you for this opportunity?** - Gracias por esta oportunidad
+**Thanks you for this opportunity?** - Gracias por esta oportunidad
 
 **What do you recommend for me to improve my english?** - ¿Qué me recomiendas para mejorar mi inglés?
 
