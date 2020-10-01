@@ -70,3 +70,23 @@ Esta confrontación se puede hacer una vez al mes.
 
 Hazte tests de tus skills para saber en dónde debes reforzar tu aprendizaje. 
 
+### Frases útiles
+
+**Could you speak slowly, please?** - ¿Puedes hablar más despacio?
+
+**What does that mean?** - ¿Qué significa eso?
+
+**Sorry, I don't understand what you are asking me to do** - Lo siento, no entiendo lo que quieres que haga
+
+**Could you tell me how you learned to speak like that?** - ¿Puedes decirme cómo aprendiste a hablar así?
+
+**Thak you for this opportunity?** - Gracias por esta oportunidad
+
+**What do you recommend for me to improve my english?** - ¿Qué me recomiendas para mejorar mi inglés?
+
+**When will the next meetup be?** - ¿Cuándo será el próximo meetup?
+
+**Iwould like to prepose a theme for the next meetup** - Me gustaría proponer un tema para el próximo meetup
+
+\*\*\*\*
+
