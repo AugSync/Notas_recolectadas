@@ -8,6 +8,7 @@
 
 ## Crecimiento Profesional
 
+* [Curso de Scrum](crecimiento-profesional/curso-de-scrum.md)
 * [Ortografía básica](crecimiento-profesional/ortografia-basica.md)
 
 ## English
