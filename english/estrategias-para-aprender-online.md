@@ -80,13 +80,13 @@ Hazte tests de tus skills para saber en dónde debes reforzar tu aprendizaje.
 
 **Could you tell me how you learned to speak like that?** - ¿Puedes decirme cómo aprendiste a hablar así?
 
-**Thak you for this opportunity?** - Gracias por esta oportunidad
+**Thaks you for this opportunity?** - Gracias por esta oportunidad
 
 **What do you recommend for me to improve my english?** - ¿Qué me recomiendas para mejorar mi inglés?
 
 **When will the next meetup be?** - ¿Cuándo será el próximo meetup?
 
-**Iwould like to prepose a theme for the next meetup** - Me gustaría proponer un tema para el próximo meetup
+**I would like to propose a theme for the next meetup** - Me gustaría proponer un tema para el próximo meetup
 
 \*\*\*\*
 
