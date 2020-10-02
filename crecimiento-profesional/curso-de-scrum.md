@@ -76,6 +76,38 @@ Representa en el trabajo y el valor del mismo. Todos tienen acceso a estos para 
 * **Product backlog**: una lista detallada de lo que se conoce que es necesario para el proyecto.
 * **Sprint backlog**: un pequeño conjunto de elementos del producto backlog que se va a trabajar en ese sprint.
 
+### Equipo de Scrum
+
+Vamos a tener un equipo con varios roles.
+
+* **Product owner**: el encargado de establecer relación con el cliente para conocer el producto. 
+* **Scrum master**: encargado de que las reglas se cumplan.
+* **Equipo de desarrollo**: el equipo que crea la aplicación o el proyecto. 
+
+Este equipo está diseñado para que sea flexible y avancen al mismo tiempo. 
+
+El producto puede ser entregada por parte, esto es una entrega incremental. Debe ir mejorando cada vez, pero debe entregarse ese valor de producto al cliente. La idea de esto es maximizar las oportunidades de tener un feedback del cliente. 
+
+Las dependencias externas deben evitarse a toda costa. El equipo debe contener todas las personas necesarias para terminar el trabajo. 
+
+Pueden organizarse en base a las funcionalidades de los componentes.
+
+### Product Owner
+
+Es el responsable de maximizar el valor del producto. Es el responsable de gestionar la lista del producto. Si el cliente no está, el debe transmitir exactamente qué es lo que el cliente desea. 
+
+Responsabilidades: 
+
+* Expresar claramente qué es lo que el cliente quiere. Es responsabilidad de el bajar la cantidad de dudas.
+* Es responsable de la prioridad de los items de la lista del producto. 
+* Optimiza el valor del trabajo del equipo del desarrollo. 
+* Se asegura de que la lista del producto sea transparence y clara. Debe dar información en tiempo real al cliente.
+* Debe asegurarse de que el equipo sepa la lista de requerimientos. 
+
+El decide en qué se va a trabajar. Su decisión se debe respetar ya que es la única persona autorizada para modificar la lista del producto. 
+
+Nadie puede forzar al equipo a trabajar en tareas que no estén proprizadas en la lista del producto. 
+
 
 
 
