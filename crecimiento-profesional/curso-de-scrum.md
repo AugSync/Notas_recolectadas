@@ -106,7 +106,68 @@ Responsabilidades:
 
 El decide en qué se va a trabajar. Su decisión se debe respetar ya que es la única persona autorizada para modificar la lista del producto. 
 
-Nadie puede forzar al equipo a trabajar en tareas que no estén proprizadas en la lista del producto. 
+Nadie puede forzar al equipo a trabajar en tareas que no estén priorizadas en la lista del producto. 
+
+### Scrum Master
+
+Es el encargado de ayudar a que el equipo mejora, es el primero en promover el marco scrum. Ayuda a todos a entender en qué momento es el indicado para interactuar con el equipo y en qué momento no. 
+
+Va a estar al servicio de la gente, esté fuera o dentro del equipo. 
+
+Ayuda al product owner de la siguiente forma:
+
+* Se asegura que todos los miembros del equipo entiendan en qué se va a trabajar. 
+* Entienda y practique la agilidad. 
+* Facilita los eventos de Scrum según se requiera o necesite.
+
+Ayuda al equipo de desarrollo de la siguiente forma:
+
+* Guía al equipo a ser auto organizado y multi funcional. 
+* Ayuda al equipo a crear un producto de alto valor. 
+* Elimina los impedimentos para el progreso del Equipo de Desarrollo. 
+
+Ayuda a toda la organización de la siguiente forma:
+
+* Guía a la organización a usar Scrum o a entender que el equipo de desarrollo usa Scrum
+* Trabaja con otros Scrum master para incrementar la efectividad de la aplicación del marco en toda la organización. 
+
+### Equipo de desarrollo.
+
+Consiste en profesionales que realizan trabajos para incrementar el valor del producto que se desea terminar. El producto terminado es la actividad que se realizó en el sprint, el cliente podrá tener una idea de su producto final. 
+
+La organización debe darle la confianza y empoderamiento a que el equipo tome sus decisiones. 
+
+**Características**: 
+
+* Auto organizados: deciden quién va a hacer cada cosa.
+* Multi funcional: no solo tenemos a programadores, Podemos tener diseñadores y QA, entre otros.
+* No tienen títulos: que alguien tenga más experiencia no lo hace jefe del equipo de desarrollo. Todos van a ser responsables de la misma forma. 
+* No hay sub equipos: todos son un solo equipo y trabajan al mismo ritmo.
+* No se puede modificar el equipo hasta que haya terminado el sprint.
+
+Debe ser lo suficientemente pequeño para que sea ágil pero lo suficientemente grande como para poder entregar el producto. Pueden ser entre 3 a 9 personas. No incluyen al scrum master ni al product owner, a menos que puedan cumplir con tareas del equipo. 
+
+### Las épicas y el Backlog del producto
+
+Es una lista ordenada de todos los requisitos del proyecto. Todo lo que el cliente quiere que se le haga al producto debe estar en esa lista. 
+
+La lista del producto nunca va a estar completa. Esto no quiere decir que el cliente no sepa lo que quiere, pero puede ir agregándose nuevo requerimientos. Los elementos de la lista más prioritarios deben tener una descripción completa. 
+
+A lo largo del desarrollo la lista puede cambiar, es un artefacto vivo. En ella están todos los elemento necesarios para completar el producto. 
+
+#### **historias de usuario**
+
+Los elementos se llaman **historias de usuario**. Son suficientemente modulares y pequeños que describen el uso del producto.
+
+#### Épicas 
+
+ Las épicas están conformada por varias historias o módulos del producto. Puede tomarse varios sprint en completarse.
+
+Pueden ser módulos como: Módulo de autenticación, módulo de creación de elementos, entre otros. Y en ellos estará un conjunto de historias. 
+
+
+
+
 
 
 
