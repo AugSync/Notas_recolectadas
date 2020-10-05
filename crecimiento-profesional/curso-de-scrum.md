@@ -273,6 +273,75 @@ El product owner debe encargarse de resolver cualquier duda. Puede haber invitad
 
 Resumen: tomar los elementos, estimar el tiempo, calcular el total de puntos con la capacidad del equipo y trazar objetivos claros. 
 
+### Daily standup
+
+Es una reunión diaria del equipo de desarrollo. Debe ser en pié y se habla sobre lo que se va a hacer en las próximas 24 horas. Otras personas pueden estar presente pero no puede hablar en la reunión. 
+
+Esto optimiza la colaboración etre el equipo y puede comentar en las reuniones próximas en detalles más profundos. 
+
+Hay que hacerse tres preguntas:  
+¿Qué hice ayer para cumplir con el objetivo?  
+¿Qué hice hoy?  
+¿Tengo algún impedimento?
+
+Si existe un impedimento, el scrum master se encarga en resolver este impedimento que generalmente tiene que ver con personas externas. Se pueden organizar reuniones entre miembros del equipo para resolver detalles. 
+
+### Refinar historias
+
+Para poder ver en qué se va a trabajar el próximo sprint, debe refinarse las historias. Deben tener toda la claridad necesaria para poder ser trabajas desde el primer día del sprint. 
+
+Se recomienda que sea a mitad del sprint el día qeu se van a refinar las historias. Puedes participar todos, pero no es necesario que participe todo el equipo del desarrollo. 
+
+El objetivo de esta sesión puede ser completar la descripción, crear el criterio de aceptación, crear marcos de pruebas y también si hay un tipo de dependencia. 
+
+### Demos y retrospectiva
+
+El sprint review sucede en el último día y se muestra al cliente todo lo que hemos hecho. Puede ser varias reuniones a lo largo del sprint para mostrar funcionalidades pero no es necesario, puede ser todo al final del sprint. 
+
+En esta ceremonia se interactúa con el cliente. Es un timo de retroalimentación. En esta reunión de habla de las historias que no se lograron terminar, y se debe ser totalmente transparente con el cliente. Es una reunión un tanto informal, abierta al diálogo y al feedback, no es una reunión de seguimiento. Esto podría afectar en el ánimo del equipo. 
+
+No debe durar más de 4 horas para un sprint de un mes pero esto dependerá de la cantidad de cosas que se tienen que presentar. Al final de la revisión, se tendrá una lista del producto actualizada. 
+
+Debemos mostrar el software directamente en lugar de una presentación. 
+
+Luego viene la retrospectiva, debe suceder en un ambiente cómodo donde el equipo pueda hablar y decir lo que siente y piensa de todo el trabajo. Es una oportunidad de mejora, esto es solo para el equipo de scrum. No se permite personas ajenas al equipo. Esta retrospectiva debe ser positiva, no se puede culpar ni regañar, es para hacer sentir bien a todos los miembros. 
+
+No debe durar más de 3 horas para un sprint de un mes, para un sprint de una semana puede durar entre 15 min a una hora, el scrum master se encargará de esto. Participarán todos y deben estar presentes. 
+
+Se hablará sobre herramientas, relaciones, personas y proceso. 
+
+Se debe responser las siguientes preguntas: ¿qué hicimos bien? ¿Qué no hicimos tan bien? ¿Qué podemos mejorar?
+
+En base a estas respuestas se sacan cuales son las más importantes y se aplica un plan de acción para solucionar los problemas y mejorar el rendimiento. 
+
+###  Escabilidad de equipos
+
+La forma en que se organiza scrum nos permitirá hacer funcionar un equipo con muchas personas. 
+
+Se puede dividir en equipos de scrum, y pertenecerán a scrum de scrums, que es un equipo virtual que nos ayudará a coordinar los elementos de trabajo entre todos los equipos. 
+
+Los scrum of scrums se coordinan a travez de esta reunión, solo participan algunas personas de cada equipo, y la idea es que todos los involucrados en el proyecto participen. Debe haber al menos un encargado de cada equipo, que puede ser cualquier, desde un programador hasta el product owner. 
+
+### Comunidades de práctica
+
+Son grupos de personas que comparten una pasión por algo que hacen, e intentan hacerlo lo mejor posible a medida que van interactuando. 
+
+Si conoces a alguien que haga lo mismo que tú haces, entre los dos pueden ayudarse para mejorar en lo mismo. 
+
+Tiene varios elementos:
+
+* Lo que nos gusta
+* La práctica: cómo lo compartimos y practicamos
+* A quién más le interesa: pueden haber más programadores o personas que quieran aprender del tema
+
+La comunidad se puede dividir en roles: programadores, diseñadores, producto owner, entre otros. 
+
+También se puede hacer basado en tópicos: programación, ui ux, diseño. 
+
+Cada equipo tiene programadores, diseñadores, entre otros. Y entre ellos pueden compartir sus mejores prácticas para poder seguir mejorano. 
+
+
+
 
 
 
