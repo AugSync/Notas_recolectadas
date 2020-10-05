@@ -165,6 +165,120 @@ Los elementos se llaman **historias de usuario**. Son suficientemente modulares 
 
 Pueden ser módulos como: Módulo de autenticación, módulo de creación de elementos, entre otros. Y en ellos estará un conjunto de historias. 
 
+### ¿Qué nos cuentan las historias de usuario?
+
+Son los elementos más específicos del producto, es lo que el usuario nos está contando, lo que quiere de nuestro producto. No necesariamente tiene que ser una persona, puede ser una parte del sistema. 
+
+Componentes
+
+1. Título
+2. Descripción
+3. Puntos 
+4. Criterio de aceptación
+
+#### Descripción:
+
+Como \(rol\) quiero \(acción\) para \(beneficio\).
+
+Ejemplo: **Como** estudiante **quiero** poder completar evaluaciones en la plataforma **para** poder ser evaluado y tener calificación. 
+
+Para que una historia esté completa debe tener las funcionalidades, que son los criterios de aceptación. El código debe estar subido a github, etc. Debe tener las pruebas necesarias y también documentación. Pueden ser más o menos. 
+
+Hay que invertir tiempo, podemos aplicar las tres C. 
+
+* Cards: donde escribimos las historias
+* Conversación: hablar con el cliente
+* Confirmación: asegurarse de que todos lleguen a un acuerdo
+
+Debe ser independiente.
+
+Debe ser negociable, se puede cambiar. 
+
+Debe ser valiosa para el cliente. 
+
+Debe ser estimable.
+
+Debe ser pequeña.
+
+Debe ser testeable, a través de los criterios de aceptación o a travez de listo.
+
+### Estimar las historias
+
+Los puntos de una historia son números que representan varias cosas:
+
+* Complejidad de la historia
+* Cantidad de trabajo requerido
+* Conocimientos necesarios
+* Incertidumbre
+
+Los puntos no son horas, líneas o cantidad de commits por hacer, no es una unidad de medición específica. 
+
+Puede ser representado por cualquier tipo de escala, por ejemplo, fibonacci modificado: 1, 2, 3, 5, 8, 13, 20, 40, 100, infinite, ?.
+
+Es así para evitar ser exactos en el número, ya que podremos redondear la complejidad al número más cercano. 
+
+Esto nos da un total de puntos por las historias, y podremos calcular por los puntos que el equipo puede completar.
+
+La velocidad es el total de puntos que el equipo puede completar en un sprint, y la capacidad es la cantidad de historias de usuario que el equipo puede completar en base a su experiencia. 
+
+### Lista de pendientes
+
+Deben ser flexibles, se pueden quitar historias que no sean tan importantes para meter otras que sean de alta prioridad, el equipo debe aceptar esto. 
+
+El equipo de desarrollo decide las prioridades del sprint.
+
+Para definir las prioridades se debe pensar en la urgencia y en la importancia de ese feature para el cliente. 
+
+El riesgo o la oportunidad también puede definir la importancia. Si no se hace una y puede atrasar otras historias, entonces debe ser prioridad. Si esa historia se hace y permite avanzar en otras historias, entonces debe ser prioridad también. 
+
+También se debe medir el esfuerzo para completar esa historia para definir su importancia. 
+
+### Midiendo el avance
+
+Puede ser día a día, y es para ver si el equipo puede cumplir con el sprint. 
+
+Estas mediciones se pueden hacer en excel en base a los puntos de las historias. 
+
+{% embed url="https://docs.google.com/spreadsheets/d/1kXIUDLTA5KLVDhubFJg1JD5x11FW7gxK91Cy9\_H0Vfs/edit?usp=sharing" %}
+
+### Ritmo del Sprint
+
+Es un periodo de tiempo fijo. Lo más utilizado son dos semanas. 
+
+El flujo es el siguiente: planeación, scrum diario, trabajo de desarrollo, revisión del sprint, la retrospectiva para mejorar.
+
+Todos los sprint deben tener un objetivo claro. Cualquier cambio debe ser negociado entre el product owner y el equipo de desarrollo. 
+
+El sprint puede ser cancelado, y puede ser cancelado por el product owner. 
+
+Es muy poco común que esto pase. 
+
+### Planeación
+
+Se define qué elemento del producto se va a realizar. Debe estar presente todo el equipo de scrum. 
+
+No debe durar más de 8 horas para sprint de cuatro semanas. Normalmente dura 2 horas para dos semanas. 
+
+El scrum master se encarga de organizar esta ceremonia, debe ser un salón suficientemente amplio para que el equipo pueda trabajar cómodo. 
+
+Nadie puede distraerse en este momento, ya que es muy importante. 
+
+¿Qué puede entregrarse al final del sprint? Se toman los elementos más prioritarios de la lista del producto y se mueve al backlog del sprint. En base a esa lista se decine los objetivos del sprint, puede tener uno o dos objetivos, pero es recomendable que sea uno solo. 
+
+Se necesita saber la capacidad del equipo y la velocidad que tuvieron en el sprint aterior. 
+
+¿Cómo se logrará? Se mueven los elementos de la lista del producto al backlog, y aquí se hace la planeación y el esfuerzo que debe dedicarse a cumplir. 
+
+El product owner debe encargarse de resolver cualquier duda. Puede haber invitados en esto. 
+
+Resumen: tomar los elementos, estimar el tiempo, calcular el total de puntos con la capacidad del equipo y trazar objetivos claros. 
+
+
+
+
+
+
+
 
 
 
