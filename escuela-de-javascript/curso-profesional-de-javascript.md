@@ -792,7 +792,7 @@ const accion = person.saludar;
 accion();
 ```
 
-Acá el navegador nos arrojará un error ya que no se puede leer a `this.name` por que no existen en el contesto `global`.
+Acá el navegador nos arrojará un error ya que no se puede leer a `this.name` por que no existen en el contexto `global`.
 
 ### This en el contexto de una clase
 
