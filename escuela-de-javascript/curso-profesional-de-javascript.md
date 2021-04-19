@@ -1228,7 +1228,7 @@ Podemos comprobar que es el mismo objeto que `prototype` de la siguiente forma:
 
 Hace referencia al mismo lugar de memoria. Ese objeto es idéntico al que está en `Persona.prototype`. Esto significa que no es una copia. Esto quiere decir que si le agregamos un método a `Persona` inmediatamente está disponible en `miPersona`, esto por que el lenguaje lo encadena y representa la misma cosa.
 
-El lenguaje busca el método en el objeto, sino existe se va al **proto** y si no está en el **proto** se va al **proto** del **proto**, allí acaba. El ultimo **proto** es `Object`, es el punto de partida de todos los objetos de JavaScript. El **proto** de **Object** no existe, es aquí cuando la búsqueda se detiene, si ejecutamos una función que no existe en el **proto** nos saldrá un error. ¿Vale la pena entenderlo? Pos su puesto, nos ofrece un panorama completo de las herencias comprender esto.
+El lenguaje busca el método en el objeto, sino existe se va al **proto** y si no está en el **proto** se va al **proto** del **proto**, allí acaba. El ultimo **proto** es `Object`, es el punto de partida de todos los objetos de JavaScript. El **proto** de **Object** no existe, es aquí cuando la búsqueda se detiene, si ejecutamos una función que no existe en el **proto** nos saldrá un error. ¿Vale la pena entenderlo? Por supuesto, nos ofrece un panorama completo de las herencias comprender esto.
 
 ## Parsers y el Abstract Syntax Tree
 
