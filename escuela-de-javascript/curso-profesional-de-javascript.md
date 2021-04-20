@@ -1514,6 +1514,10 @@ Una `Promesa` se encuentra en uno de los siguientes estados:
 
 Devuelve una de dos promesas: una que se cumple cuando todas las promesas en el argumento iterable han sido cumplidas, o una que se rechaza tan pronto como una de las promesas del argumento iterable es rechazada. Si la promesa retornada es cumplida, lo hace con un arreglo de los valores de las promesas cumplidas en el mismo orden definido en el iterable. Si la promesa retornada es rechazada, es rechazada con la razón de la primera promesa rechazada en el iterable. Este método puede ser útil para agregar resultados de múltiples promesas
 
+[`Promise.race(iterable)`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/race)
+
+Devuelve una promesa que se cumple o rechaza tan pronto como una de las promesas del iterable se cumple o rechaza, con el valor o razón de esa promesa.
+
 ## Getters y setters
 
 Son funciones que se usan dentro de objetos para tener propiedades virtuales, podemos establecer valores que no existían en las funciones.
@@ -1556,9 +1560,7 @@ historial.actual='mensaje 2';
 console.log(historial.log)//['mensaje 1', 'mensaje 2']
 ```
 
-En JavaScript, un _setter_ puede ser usado para ejecutar una función para una propiedad especifica que será ejecutada al cambiar el valor. Los _setters_ se suelen usar con _getters_ para crear un tipo de pseudo-propiedad. No es posible tener un _setter_ para una propiedad que tiene un valor real.[`Promise.race(iterable)`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise/race)
-
-Devuelve una promesa que se cumple o rechaza tan pronto como una de las promesas del iterable se cumple o rechaza, con el valor o razón de esa promesa.
+En JavaScript, un _setter_ puede ser usado para ejecutar una función para una propiedad especifica que será ejecutada al cambiar el valor. Los _setters_ se suelen usar con _getters_ para crear un tipo de pseudo-propiedad. No es posible tener un _setter_ para una propiedad que tiene un valor real.
 
 ## Proxy
 
